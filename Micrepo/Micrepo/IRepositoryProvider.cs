@@ -2,9 +2,10 @@ using System;
 
 namespace Micrepo
 {
-    public interface IRepositoryProvider
+    public interface IRepositoryProvider :
+        IObserver<UnitOfWork>
     {
-        IRepository<TEntity> ConstructRepository<TEntity>()
+            IRepository<TEntity> ConstructRepository<TEntity>()
             where TEntity : class, IEntity;
 
         void Rollback();

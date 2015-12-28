@@ -1,7 +1,6 @@
 namespace Micrepo
 {
-    internal class EntityConfiguration
-
+    public class EntityConfiguration
     {
         private readonly IRepositoryProvider _repositoryProvider;
 

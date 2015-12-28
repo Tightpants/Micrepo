@@ -7,12 +7,12 @@ namespace Micrepo
         where TEntity : class, IEntity
     {
         private readonly IRepository<TEntity> _repository;
+        
 
         public Repository(IRepository<TEntity> repository)
         {
             _repository = repository;
         }
-
 
         public TEntity Get(Guid guid)
         {
